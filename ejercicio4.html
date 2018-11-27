@@ -1,0 +1,29 @@
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+   </head>
+   <body>
+     <h1 id="title"> ¡¡¡ La bomba !!! </h1>
+     <h2 id="timer">5</h2>
+   <script>
+     var timer_tag = document.getElementById('timer');
+     var timer = timer_tag.innerHTML;
+     timer = parseInt(timer);
+     var interval = setInterval(
+        function(){
+           timer = timer - 1
+           timer_tag.innerHTML = timer
+           if (timer == 0){
+             var title = document.getElementById('title');
+             title.innerHTML = "boom!";
+             title.style.color = "red";
+             StopFunction();
+         }
+         function StopFunction(){
+             clearInterval(interval);
+         }
+     }, 1000);
+   </script>
+   </body>
+</html>

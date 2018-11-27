@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <title></title>
+   </head>
+   <body>
+     <input type="text" name="calculator" value="">
+     <br>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">1</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">2</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">3</button>
+     <br>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">4</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">5</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">6</button>
+     <br>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">7</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">8</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">9</button>
+     <br>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">0</button>
+     <button class="btn" type="button" name="button" onclick="calculatorFunction(this)">+</button>
+     <button class="btn" type="button" name="button"onclick="calculatorFunction(this)">-</button>
+     <br>
+     <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+     <script type="text/javascript">
+       var result = document.getElementsByName("result")[0];
+       var calculator = document.getElementsByName("calculator")[0];
+       var calcTotal = function(){
+       calculator.value = eval(calculator.value);
+       }
+       var numberList = [];
+       function calculatorFunction(element) {
+         num = element.innerText
+         numberList.push(num);
+         calculator.value += num
+
+        }
+     </script>
+   </body>
+</html>
